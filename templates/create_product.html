@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Product</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+</head>
+<body>
+    <div class="ui container" style="margin-top: 50px;">
+        <h2 class="ui header center aligned">Add a New Product</h2>
+        
+        <form class="ui form" action="{{ url_for('add_product') }}" method="POST">
+            <div class="field">
+                <label>Product Name</label>
+                <input type="text" name="product_name" placeholder="Enter product name" required>
+            </div>
+            
+            <div class="field">
+                <label>Image URL</label>
+                <input type="url" name="image_url" placeholder="Enter image URL" required>
+            </div>
+            
+            <button class="ui primary button" type="submit">Add Product</button>
+            <a href="{{ url_for('products') }}" class="ui button">Cancel</a>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compare Reviews</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+</head>
+<body>
+    <div class="ui container">
+        <h1 class="ui block header center aligned">Sentiment Analysis for Product Reviews</h1>
+
+        <div class="ui segment">
+            <h2 class="ui header">Monthly Sentiment Distribution</h2>
+            <img class="ui fluid image" src="data:image/png;base64,{{ grouped_bar_chart_url }}" alt="Monthly Sentiment Distribution">
+        </div>
+
+        <div class="ui segment">
+            <h2 class="ui header">Sentiment Trajectory Over Time</h2>
+            <img class="ui fluid image" src="data:image/png;base64,{{ line_chart_url }}" alt="Sentiment Trajectory Over Time">
+        </div>
+
+        <div class="ui buttons">
+            <a class="ui button" href="/products">Go Back</a>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+</body>
+</html>
